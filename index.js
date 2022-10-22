@@ -8,8 +8,13 @@ inputBtn.addEventListener("click", function () {
   console.log(myLeads);
 });
 
-// Log out the items in the myLeads array using a for loop
+// 1. Create a variable, listItems, to hold all the HTML for the list items
+let listItems = "";
+// Assign it to an empty string to begin with
 for (let i = 0; i < myLeads.length; i++) {
-  console.log(myLeads[i]);
-  ulEl.innerHTML += "<li>" + myLeads[i] + " " + "</li>";
+  // 2. Add the item to the listItems variable instead of the ulEl.innerHTML
+  listItems += "<li>" + myLeads[i] + "</li>";
+  // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
 }
+// 3. Render the listItems inside the unordered list using ulEl.innerHTML
+ulEl.innerHTML = listItems;
