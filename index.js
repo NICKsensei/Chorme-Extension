@@ -1,3 +1,5 @@
-function saveInput() {
-  console.log("saved");
-}
+let inputBtn = document.getElementById("input-btn");
+
+inputBtn.addEventListener("click", function () {
+  console.log("Saved");
+});
